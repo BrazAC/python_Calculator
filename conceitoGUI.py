@@ -1,0 +1,52 @@
+import tkinter
+
+#Janela principal
+root = tkinter.Tk()
+root.geometry("430x500")
+root.title("Super Mega Calculadora 9000")
+
+#Caixa de texto
+caixaTexto = tkinter.Text(root, font=('Arial',20),height=2).pack(padx=36, pady=20)
+
+#Grade de botões
+gradeBotoes = tkinter.Frame(root)
+gradeBotoes.columnconfigure(0, weight=1)
+gradeBotoes.columnconfigure(1, weight=1)
+gradeBotoes.columnconfigure(2, weight=1)
+gradeBotoes.columnconfigure(3, weight=1)
+
+botao1 = tkinter.Button(gradeBotoes, text="1", font=('Arial',20), height=2, width=5)
+botao1.grid(row=0, column=0, sticky=tkinter.W+tkinter.E)
+botao2 = tkinter.Button(gradeBotoes, text="2", font=('Arial',20), height=2, width=5)
+botao2.grid(row=0, column=1, sticky=tkinter.W+tkinter.E)
+botao3 = tkinter.Button(gradeBotoes, text="3", font=('Arial',20), height=2, width=5)
+botao3.grid(row=0, column=2, sticky=tkinter.W+tkinter.E)
+botao4 = tkinter.Button(gradeBotoes, text="4", font=('Arial',20), height=2)
+botao4.grid(row=1, column=0, sticky=tkinter.W+tkinter.E)
+botao5 = tkinter.Button(gradeBotoes, text="5", font=('Arial',20), height=2)
+botao5.grid(row=1, column=1, sticky=tkinter.W+tkinter.E)
+botao6 = tkinter.Button(gradeBotoes, text="6", font=('Arial',20), height=2)
+botao6.grid(row=1, column=2, sticky=tkinter.W+tkinter.E)
+botao7 = tkinter.Button(gradeBotoes, text="7", font=('Arial',20), height=2)
+botao7.grid(row=2, column=0, sticky=tkinter.W+tkinter.E)
+botao8 = tkinter.Button(gradeBotoes, text="8", font=('Arial',20), height=2)
+botao8.grid(row=2, column=1, sticky=tkinter.W+tkinter.E)
+botao9 = tkinter.Button(gradeBotoes, text="9", font=('Arial',20), height=2)
+botao9.grid(row=2, column=2, sticky=tkinter.W+tkinter.E)
+botao0 = tkinter.Button(gradeBotoes, text="0", font=('Arial',20), height=2)
+botao0.grid(row=3, column=1, sticky=tkinter.W+tkinter.E)
+botaoDel = tkinter.Button(gradeBotoes, text="=", font=('Arial',20), height=2)
+botaoDel.grid(row=3, column=2, sticky=tkinter.W+tkinter.E)
+botaoMais = tkinter.Button(gradeBotoes, text="+", font=('Arial',20), height=2)
+botaoMais.grid(row=0, column=3, sticky=tkinter.W+tkinter.E)
+botaoMenos = tkinter.Button(gradeBotoes, text="-", font=('Arial',20), height=2, width=5)
+botaoMenos.grid(row=1, column=3, sticky=tkinter.W+tkinter.E)
+botaoMult = tkinter.Button(gradeBotoes, text="x", font=('Arial',20), height=2)
+botaoMult.grid(row=2, column=3, sticky=tkinter.W+tkinter.E)
+botaoDiv = tkinter.Button(gradeBotoes, text="/", font=('Arial',20), height=2)
+botaoDiv.grid(row=3, column=3, sticky=tkinter.W+tkinter.E)
+botaoRes = tkinter.Button(gradeBotoes, text="Del", font=('Arial',20), height=2)
+botaoRes.grid(row=3, column=0, sticky=tkinter.W+tkinter.E)
+gradeBotoes.pack(padx=0, pady=0)
+
+root.mainloop()
